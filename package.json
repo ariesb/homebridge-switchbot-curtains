@@ -1,0 +1,42 @@
+{
+  "name": "homebridge-switchbot-curtains",
+  "version": "0.1.6",
+  "description": "Homebridge Alternative Accessory for Switchbot Curtains",
+  "main": "dist/accessory.js",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build": "rimraf ./dist && tsc",
+    "bb": "tsc",
+    "prepublishOnly": "npm run build",
+    "postpublish": "npm run clean",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aries Beltran <me@ariesb.com>",
+  "engines": {
+    "homebridge": ">=1.0.0"
+  },
+  "keywords": [
+    "homebridge-plugin"
+  ],
+  "license": "ISC",
+  "files": [
+    "LICENSE",
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ariesb/homebridge-switchbot-curtains.git"
+  },
+  "bugs": {
+    "url": "http://github.com/ariesb/homebridge-switchbot-curtains/issues"
+  },
+  "devDependencies": {
+    "@types/node": "10.17.19",
+    "homebridge": "^1.0.4",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "node-switchbot": "^1.0.0"
+  }
+}
